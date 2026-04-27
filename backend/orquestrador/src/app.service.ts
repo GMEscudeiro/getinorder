@@ -2,6 +2,9 @@ import { BadRequestException, Injectable, InternalServerErrorException } from '@
 
 @Injectable()
 export class AppService {
+  getHello(): string {
+    return 'Hello World!';
+  }
   async cadastrarTarefa(payload: any) {
     const { disciplinaId, usuarioId, membrosIds } = payload;
 
